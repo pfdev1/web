@@ -1,6 +1,10 @@
 function getIP(json) {
      if (json && json.region) {
-         document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", json.region);
+          if (upperCase) {
+               document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", json.region.toUpperCase());
+          } else {
+               document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", json.region);
+          }
      }
 }
 let script = document.createElement("script");
