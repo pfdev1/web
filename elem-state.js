@@ -1,6 +1,6 @@
 function getIP(json) {
      if (json && json.region) {
-          if (upperCase) {
+          if (typeof upperCase !== 'undefined') {
                document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", json.region.toUpperCase());
           } else {
                document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", json.region);
