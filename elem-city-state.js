@@ -1,6 +1,7 @@
 function getIP(json) {
      if (json && json.region_code && json.city) {
-       const x = json.city + ', ' + json.region_code;
+       let x = json.city + ', ' + json.region_code;
+       x = upperCase ? x.toUpperCase() : x;
        document.getElementById(title).innerHTML = document.getElementById(title).innerHTML.replace("America", x);
      }
 }
